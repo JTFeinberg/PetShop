@@ -8,6 +8,7 @@ const db = require('./database')
 //
 // const Puppy = require('./puppy')
 // const Owner = require('./owner')
+const Centers = require('./models/centers.js');
 
 // After you've required all of your models into this module, you should establish
 // associations (https://sequelize-guides.netlify.com/association-types/) between them here as well!
@@ -17,5 +18,6 @@ const db = require('./database')
 
 module.exports = {
   // Include your models in this exports object as well!
-  db
+  db,
+  Centers
 }
