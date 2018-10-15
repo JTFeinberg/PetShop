@@ -13,3 +13,5 @@ export default createStore(
     loggingMiddleware
   )
 )
+
+export * from './reducers/centers.js'
