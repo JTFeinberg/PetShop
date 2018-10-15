@@ -19,7 +19,10 @@ module.exports = {
       {
         test: /jsx?$/,
         include: resolve(__dirname, './app'),
-        loader: 'babel-loader'
+        loader: 'babel-loader',
+        options: {
+          "presets": ["env", "react"]
+        }
       },
       {
         test: /\.css$/,
