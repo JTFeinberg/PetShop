@@ -4,23 +4,15 @@ import {connect} from 'react-redux'
 import {fetchCentersThunk} from '../store'
 
 
-class AllCenters extends Component {
-    componentDidMount() {
-        this.props.loadAllCenters()
-    }
-
-    render() {
-        return (
+const AllCenters = ({allCenters}) => (
             <ul>
-                {this.props.allCenters.map((center) => (
+                {allCenters.map((center) => (
                     <li key={center.id}>
                         {center.name}
                     </li>
                 ))}
             </ul>
-        )
-    }
-}
+        );
 
 /**
  * CONTAINER
@@ -30,7 +22,8 @@ const mapStateToProps = state => {
       allCenters: state.centers
     };
   };
-  
+
+  //Leave for now but does nothing at the moment
   const mapDispatchToProps = dispatch => {
     return {
       loadAllCenters: () => dispatch(fetchCentersThunk()),
