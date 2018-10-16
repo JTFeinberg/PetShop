@@ -13,9 +13,14 @@ class Navbar extends Component {
     render() {
         return (
           <nav>
-            <NavLink className="nav-logo" to="/" >
+            <NavLink to="/">
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE5sMxBv77wRKjHu10uTMz4VLZNAmVdobpHA8x-KrKw_Wjp0K8" />
             </NavLink>
+            <div className="nav-link">
+                <NavLink to="/about">About Us</NavLink>
+                <NavLink to="/centers">Locations</NavLink>
+                <NavLink to="/animals">Adopt</NavLink>
+            </div>
           </nav>
         );
     }

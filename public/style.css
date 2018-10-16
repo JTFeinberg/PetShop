@@ -35,9 +35,9 @@ main {
 /***************
 NAVBAR
 ****************/
-.nav-logo {
+nav a, nav .nav-link {
   display: flex;
 }
-nav .nav-logo img {
+nav a img {
   height: 75px;
 }
