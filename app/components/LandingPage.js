@@ -2,6 +2,7 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {fetchCentersThunk} from '../store'
+import {Link} from 'react-router-dom'
 
 
 class LandingPage extends Component {
@@ -13,6 +14,7 @@ class LandingPage extends Component {
         return (
             <div>
                  <h1>Welcome to the NYC Pet Adoption Center!</h1>
+                 <Link to="/centers">See All Centers</Link>
             </div>
         )
     }
