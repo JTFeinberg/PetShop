@@ -31,3 +31,13 @@ main {
   flex-direction: column;
   justify-content: center;
 }
+
+/***************
+NAVBAR
+****************/
+.nav-logo {
+  display: flex;
+}
+nav .nav-logo img {
+  height: 75px;
+}
