@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 
 
 const Card = ({center}) => (
-    <li className='card-body'>
+    <li className='card-body columns'>
         <div>
             <span>
                 <img src={center.imageUrl} style={{ width: "100%", height: "345px"}} />

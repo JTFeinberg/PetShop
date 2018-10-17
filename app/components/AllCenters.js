@@ -7,9 +7,12 @@ import Card from './Card'
 
 const AllCenters = ({allCenters}) => (
             <ul className="allCenters" >
+              <h1>ALL LOCATIONS</h1>
+              <div className="row">
                 {allCenters.map((center) => (
                     <Card key={center.id} center={center} />
                 ))}
+              </div>
             </ul>
         );
 

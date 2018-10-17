@@ -46,6 +46,10 @@ a, a:hover, a:focus, a:active {
 ul {
   list-style: none;
 }
+h1 {
+  margin: 0;
+  text-align: center;
+}
 
 /***************
 NAVBAR
@@ -123,6 +127,8 @@ ALL CENTERS
 .allCenters {
   position: relative;
   top: 80px;
+  margin: 5%;
+  padding: 0;
 }
 
 /***************
@@ -130,4 +136,19 @@ CARDS
 ****************/
 .card-body {
   width: 360px;
+  border: 2px solid rgb(163, 163, 163);
+}
+
+.columns {
+  float: left;
+  width: 30%;
+  margin: calc(10%/6);
+  padding: 5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
