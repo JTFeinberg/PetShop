@@ -26,10 +26,13 @@ export default class Carousel extends Component {
       }
 
     render () {
-        let {imgIdx, imgUrls} = this.state
+        let {imgIdx, imgUrls} = this.state;
       return (
         <div className="carousel">
-          <ImageSlide url={ imgUrls[imgIdx % imgUrls.length] } />
+          {imgUrls.map((url, idx) => {
+              let imgClass = imgIdx % imgUrls.length === idx ? 'carousel-image' : 'carousel-image hidden';
+              return (<img className={imgClass} src={url} key={idx} />);
+          })}
         </div>
       );
     }
