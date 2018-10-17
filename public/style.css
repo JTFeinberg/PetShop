@@ -3,6 +3,10 @@
  * but feel free to change me to your heart's content!
  */
 
+
+ /***************
+GLOBAL STYLES
+****************/
 * {
   box-sizing: border-box;
   font-family: arial, sans-serif;
@@ -37,6 +41,14 @@ main {
 a, a:hover, a:focus, a:active {
   text-decoration: none;
   outline: 0;
+}
+
+ul {
+  list-style: none;
+}
+h1 {
+  margin: 0;
+  text-align: center;
 }
 
 /***************
@@ -107,4 +119,36 @@ CAROUSEL
 
 #carousel .carousel-image.hidden {
   opacity: 0;
+}
+
+/***************
+ALL CENTERS
+****************/
+.allCenters {
+  position: relative;
+  top: 80px;
+  margin: 5%;
+  padding: 0;
+}
+
+/***************
+CARDS
+****************/
+.card-body {
+  width: 360px;
+  border: 2px solid rgb(163, 163, 163);
+}
+
+.columns {
+  float: left;
+  width: 30%;
+  margin: calc(10%/6);
+  padding: 5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }

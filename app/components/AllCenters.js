@@ -2,15 +2,17 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {fetchCentersThunk} from '../store'
+import Card from './Card'
 
 
 const AllCenters = ({allCenters}) => (
-            <ul>
+            <ul className="allCenters" >
+              <h1>ALL LOCATIONS</h1>
+              <div className="row">
                 {allCenters.map((center) => (
-                    <li key={center.id}>
-                        {center.name}
-                    </li>
+                    <Card key={center.id} center={center} />
                 ))}
+              </div>
             </ul>
         );
 
