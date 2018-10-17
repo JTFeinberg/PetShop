@@ -5,7 +5,7 @@ import {fetchCentersThunk} from '../store'
 
 
 const AllCenters = ({allCenters}) => (
-            <ul>
+            <ul className="allCenters" >
                 {allCenters.map((center) => (
                     <li key={center.id}>
                         {center.name}

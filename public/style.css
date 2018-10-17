@@ -108,3 +108,11 @@ CAROUSEL
 #carousel .carousel-image.hidden {
   opacity: 0;
 }
+
+/***************
+ALL CENTERS
+****************/
+.allCenters {
+  position: relative;
+  top: 80px;
+}
