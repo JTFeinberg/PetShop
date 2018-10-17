@@ -4,7 +4,7 @@ import React from 'react'
 
 const Footer = ({center}) => (
     <footer id="contact">
-        <div class="content-wrap">
+        
             <h2>Let's Keep in Touch!</h2>
             <div class="contact-info">
                 <a href="mailto:JacobFeinberg92@gmail.com">
@@ -17,7 +17,7 @@ const Footer = ({center}) => (
                 </a>
             </div>
             <p>Copyright 2017 by Jacob Feinberg</p>
-        </div>
+        
     </footer>
 );
 

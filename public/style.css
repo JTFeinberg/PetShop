@@ -29,6 +29,8 @@ nav {
   background: #ffffff;
   width: 100%;
   z-index: 10;
+  border-bottom: 1px solid rgb(163, 163, 163);
+
 }
 
 main {
@@ -58,7 +60,7 @@ nav a, .nav-link {
   display: flex;
 }
 #logo{
-  height: 80px;
+  height: 79px;
 }
 
 nav a img {
@@ -151,4 +153,27 @@ CARDS
   content: "";
   display: table;
   clear: both;
+}
+
+/***************
+Footer
+****************/
+footer {
+  background: #61aab8;
+  color: #F6F7EB;
+  text-align: center;
+  padding: 60px 50px;
+}
+
+.contact-info a {
+  padding: 10px;
+  display: inline-block;
+}
+footer p {
+  margin-bottom: 0;
+  padding-bottom: 10px;
+}
+
+footer a {
+  color: #393E41;
 }
