@@ -3,6 +3,10 @@
  * but feel free to change me to your heart's content!
  */
 
+
+ /***************
+GLOBAL STYLES
+****************/
 * {
   box-sizing: border-box;
   font-family: arial, sans-serif;
@@ -37,6 +41,10 @@ main {
 a, a:hover, a:focus, a:active {
   text-decoration: none;
   outline: 0;
+}
+
+ul {
+  list-style: none;
 }
 
 /***************
@@ -115,4 +123,11 @@ ALL CENTERS
 .allCenters {
   position: relative;
   top: 80px;
+}
+
+/***************
+CARDS
+****************/
+.card-body {
+  width: 360px;
 }
