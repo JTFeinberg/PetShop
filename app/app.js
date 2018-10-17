@@ -1,5 +1,5 @@
 import React from 'react'
-import {Navbar} from './components'
+import {Navbar, Carousel} from './components'
 import Routes from './routes'
 
 
@@ -9,11 +9,13 @@ const App = () => {
     <div>
       <Navbar />
       <main>
-       <Routes />
+        <Carousel />
+        <Routes />
       </main>
     </div>
   )
 }
+
 
 export default App;
 

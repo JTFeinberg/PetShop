@@ -13,7 +13,6 @@ class LandingPage extends Component {
     render() {
         return (
             <div>
-                 <h1>Welcome to the NYC Pet Adoption Center!</h1>
                  <Link to="/centers">See All Centers</Link>
             </div>
         )
