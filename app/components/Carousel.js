@@ -13,9 +13,17 @@ export default class Carousel extends Component {
                 'https://www.nycacc.org/themes/acc/images/slides/hero_home_4.jpg',
     
             ]
-        }
+        };
     }
-    
+    componentDidMount() {
+        this.interval = setInterval(() => {
+            this.setState({imgIdx: this.state.imgIdx + 1});
+        }, 5000);
+    }
+
+    componentWillUnmount(){
+        clearInterval(this.intervalId);
+      }
 
     render () {
         let {imgIdx, imgUrls} = this.state
