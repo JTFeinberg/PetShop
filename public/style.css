@@ -81,6 +81,15 @@ CAROUSEL
   width: 100vw;
 }
 
+#carousel #carousel-text {
+  position: relative;
+  top: 300px;
+  font-size: 20pt;
+  color: #fff;
+  text-shadow: 2px 2px #252525;
+  z-index: 1;
+}
+
 #carousel .carousel-image {
   position: absolute;
   display: block;
