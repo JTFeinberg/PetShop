@@ -43,6 +43,7 @@ main {
 a, a:hover, a:focus, a:active {
   text-decoration: none;
   outline: 0;
+  color: black;
 }
 
 ul {
@@ -50,6 +51,9 @@ ul {
 }
 h1 {
   margin: 0;
+  text-align: center;
+}
+.row {
   text-align: center;
 }
 
@@ -92,8 +96,7 @@ nav a img {
 CAROUSEL
 ****************/
 #carousel {
-  position: relative;
-  top: 80px;
+  padding-top: 80px;
   display: flex;
   justify-content: center;
   height: 420px;
@@ -123,14 +126,13 @@ CAROUSEL
   opacity: 0;
 }
 
+
 /***************
 ALL CENTERS
 ****************/
 .allCenters {
-  position: relative;
-  top: 80px;
   margin: 5%;
-  padding: 0;
+  padding-top: 80px;
 }
 
 /***************
@@ -139,6 +141,9 @@ CARDS
 .card-body {
   width: 360px;
   border: 2px solid rgb(163, 163, 163);
+}
+.card-body:hover {
+  border: 2px solid rgb(255, 255, 255);
 }
 
 .columns {
