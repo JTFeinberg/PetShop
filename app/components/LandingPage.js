@@ -21,8 +21,8 @@ const LandingPage = () =>
     // ]
         (
             <div>
-              <p>
-                <span style={{fontSize: "2.25vw", fontFamily: "Arial", lineHeight: "2"}}>
+              <p style={{textAlign: 'center', paddingTop: '80px'}}>
+                <span style={{fontSize: '2.25vw', fontFamily: 'Arial', lineHeight: '2'}}>
                 Surrendering your cat or bringing in a stray cat?
                 <br />
                 WAIT!
