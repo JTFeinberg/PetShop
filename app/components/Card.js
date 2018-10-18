@@ -1,6 +1,5 @@
 "use strict";
 import React from 'react'
-import {connect} from 'react-redux'
 
 
 const Card = ({center, selection}) => {
@@ -23,7 +22,8 @@ const Card = ({center, selection}) => {
             </span>
         </div>
     </li>
-)};
-
+  );
+};
 
 export default Card;
+
