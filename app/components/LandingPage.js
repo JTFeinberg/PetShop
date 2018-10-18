@@ -1,7 +1,7 @@
 "use strict";
 import React from 'react'
 import {Link} from 'react-router-dom'
-import Card from './Card'
+import {Card} from './'
 
 
 const LandingPage = () => {
@@ -34,7 +34,6 @@ const LandingPage = () => {
                     ))}
           </div>
         </ul>
-            <Link to="/centers">See All Centers</Link>
       </div>
   );
 }

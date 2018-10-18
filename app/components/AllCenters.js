@@ -1,8 +1,7 @@
 "use strict";
 import React from 'react'
 import {connect} from 'react-redux'
-import {fetchCentersThunk} from '../store'
-import Card from './Card'
+import {Card} from './'
 
 
 const AllCenters = ({allCenters}) => (
