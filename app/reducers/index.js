@@ -3,9 +3,11 @@
 
 import {combineReducers} from 'redux'
 import centers from './centers.js'
+import animals from './animals.js'
 
 const rootReducer = combineReducers({
-  centers
+  centers,
+  animals
 });
 
 export default rootReducer;
