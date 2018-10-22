@@ -6,7 +6,7 @@ import {Card} from './'
 
 const AllAnimals = ({allAnimals}) => (
   <ul className="allAnimals" >
-    <h1>ALL LOCATIONS</h1>
+    <h1>ALL ANIMALS</h1>
     <div className="row">
       {allAnimals.map((animal) => (
           <Card key={animal.id} animal={animal} />
