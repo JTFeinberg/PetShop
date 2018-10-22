@@ -2,8 +2,8 @@
 import React from 'react'
 
 
-const Card = ({center, selection}) => {
-    let data = center || selection;
+const Card = ({center, selection, animal}) => {
+    let data = center || selection || animal;
     return (
     <li className='card-body columns'>
         <div>

@@ -1,13 +1,14 @@
 "use strict";
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {fetchCentersThunk} from '../store'
+import {fetchCentersThunk, fetchAnimalsThunk} from '../store'
 import {NavLink} from 'react-router-dom'
 
 
 class Navbar extends Component {
     componentDidMount() {
-        this.props.loadAllCenters()
+        this.props.loadAllCenters();
+        this.props.loadAllAnimals();
     }
 
     render() {
@@ -31,13 +32,15 @@ class Navbar extends Component {
  */
 const mapStateToProps = state => {
     return {
-      allCenters: state.centers
+      allCenters: state.centers,
+      allAnimals: state.animals
     };
   };
   
   const mapDispatchToProps = dispatch => {
     return {
       loadAllCenters: () => dispatch(fetchCentersThunk()),
+      loadAllAnimals: () => dispatch(fetchAnimalsThunk())
     };
   };
 
