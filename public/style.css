@@ -145,6 +145,14 @@ ALL CENTERS
 }
 
 /***************
+ALL ANIMALS
+****************/
+.allAnimals {
+  margin: 5%;
+  padding-top: 80px;
+}
+
+/***************
 CARDS
 ****************/
 .card-body {
