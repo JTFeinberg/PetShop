@@ -7,7 +7,7 @@ const GET_ANIMAL = 'GET_ANIMAL';
 export const getSingleAnimal = animal => ({ type: GET_ANIMAL, payload: animal });
 
 // THUNK CREATORS
-export const fetchSingleAnimal = animalId => dispatch => {
+export const fetchSingleAnimalThunk = animalId => dispatch => {
   return axios
   .get(`/api/allAnimals/${animalId}`)
     .then(res => res.data)
