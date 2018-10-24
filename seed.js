@@ -136,10 +136,15 @@ const seed = async () => {
     // Animals.create({type:, name: , sex: , imageUrl: , age: , weight: , description: }),
 
     
-  ])
+  ]);
+
+  const animalCenter = await Promise.all(
+    animals.map(async animal => {await animal.setCenter(Math.floor(Math.random() * Math.floor(5)) + 1)}
+))
   
   console.log(blue(`Seeded all ${centers.length} adoption centers`));
   console.log(cyan(`Seeded all ${animals.length} animals`));
+  console.log(cyan(`Assigned all ${animalCenter.length} animals an adoption center`));
   console.log(green('Seeding success!'))
   db.close()
 }
