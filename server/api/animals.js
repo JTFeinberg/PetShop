@@ -3,14 +3,18 @@ const router = require("express").Router();
 const { Animals, Centers } = require("../db");
 
 router.get('/', (req, res, next) => {
-    Animals.findAll()
+    Animals.findAll({
+      include: {
+      model: Centers
+      }
+    })
       .then(allAnimals => res.json(allAnimals))
       .catch(next);
 });
 
 router.get('/:animalId', (req, res, next) => {
   Animals.findById(
-    req.params.animalId, 
+    req.params.animalId,
     {
       include: {
       model: Centers

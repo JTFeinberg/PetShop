@@ -7,7 +7,9 @@ import { Link } from 'react-router-dom'
 class SingleAnimal extends Component {
   componentDidMount() {
     const { animalId } = this.props.match.params;
-    this.props.loadSingleAnimal(animalId);
+    if (this.props.currAnimal.id !== +animalId){
+      this.props.loadSingleAnimal(animalId);
+    }
   }
 
   render() {
