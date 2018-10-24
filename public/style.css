@@ -178,6 +178,30 @@ CARDS
 }
 
 /***************
+SINGLE ANIMALS
+****************/
+.single-animal-content {
+  padding: 5.5% 5.5% 0 5.5%;
+  margin: 7%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-4 img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.col-4 ul {
+  list-style: circle;
+}
+.col-4 ul li p span {
+  font-weight: bold;
+}
+
+/***************
 Footer
 ****************/
 footer {
