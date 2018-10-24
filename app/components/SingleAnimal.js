@@ -12,7 +12,6 @@ class SingleAnimal extends Component {
 
   render() {
     const { currAnimal } = this.props;
-    console.log(currAnimal);
     return currAnimal.id ? (
       <section className="single-animal-content">
         <div className="col-4">
@@ -20,9 +19,9 @@ class SingleAnimal extends Component {
           <p id="adoption-description">
             Connect with an adoption counselor to find out more about{" "}
             <span>{currAnimal.name}</span>
-            by clicking below.
+            {" "}by clicking below.
           </p>
-          <a href={`mailto:JacobFeinberg92@gmail.com?subject=I’d like to know more about ${currAnimal.name} -- ID: 45033`}><button>I’d Like to Learn more!</button></a>
+          <a href={`mailto:JacobFeinberg92@gmail.com?subject=I’d like to know more about ${currAnimal.name} -- ID#: ${currAnimal.id}`}><button>I’d Like to Learn more!</button></a>
           <ul>
               <li><p><span>Sex: </span>{currAnimal.sex}</p></li>
               <li><p><span>Age: </span>{currAnimal.age} {currAnimal.age === 1 ? 'year old' : 'years old'}</p></li>
@@ -31,15 +30,16 @@ class SingleAnimal extends Component {
               <li><p><span>Address: </span>{currAnimal.center.location}</p></li>
           </ul>
         </div>
-        <div className="col-8" />
+        <div className="col-8">
           <h2>{currAnimal.name}</h2>
           <ul>
-              <li><p>ID# {currAnimal.id}</p></li>
-              <li><p>{currAnimal.type}</p></li>
-              <li><p>{currAnimal.center.name}</p></li>
+              <li><p>ID# {currAnimal.id} </p></li>
+              <li><p> - {`${currAnimal.type} `} </p></li>
+              <li><p> - {currAnimal.center.name}</p></li>
           </ul>
           <p className="single-animal-description">{currAnimal.description ? currAnimal.description : ''}</p>
-          <p>Head <Link to="/All Adoptions">back to search</Link> more Boroughbreds just like Karachi. All animals are microchipped, vaccinated, and spayed or neutered before adoption. </p>
+          <p className='closing-p'>Head <Link to="/All Adoptions">back to search</Link> more Boroughbreds just like {currAnimal.name}. All animals are microchipped, vaccinated, and spayed or neutered before adoption. </p>
+        </div>
       </section>
     ) : null;
   }

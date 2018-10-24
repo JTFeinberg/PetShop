@@ -112,6 +112,7 @@ CAROUSEL
   color: #fff;
   text-shadow: 2px 2px #252525;
   z-index: 1;
+  height: 0;
 }
 
 #carousel .carousel-image {
@@ -181,12 +182,18 @@ CARDS
 SINGLE ANIMALS
 ****************/
 .single-animal-content {
+  display: flex;
   padding: 5.5% 5.5% 0 5.5%;
   margin: 7%;
 }
 
 .col-4 {
   width: 33.33%;
+}
+
+.col-8 {
+  width: 66.67%;
+  padding: 0 5%;
 }
 
 .col-4 img {
@@ -200,6 +207,33 @@ SINGLE ANIMALS
 .col-4 ul li p span {
   font-weight: bold;
 }
+
+.col-8 h2 {
+  margin: 0;
+  font-family: 'JaapokkiRegular',Arial,Helvetica,sans-serif;
+  font-size: 60px;
+  color: #61aab8;
+}
+
+.col-8 ul {
+  display: flex;
+  padding: 0;
+}
+
+.col-8 ul li p{
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.col-8 .closing-p {
+  font-weight: bold;
+}
+
+.col-8 .closing-p a {
+  color: #61aab8;
+}
+
+
 
 /***************
 Footer
