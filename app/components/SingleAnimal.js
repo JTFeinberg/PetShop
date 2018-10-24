@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchSingleAnimalThunk } from "../store";
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 class SingleAnimal extends Component {
   componentDidMount() {

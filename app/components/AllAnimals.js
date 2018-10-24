@@ -2,14 +2,14 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {Card} from './'
-
+import {Link} from 'react-router-dom'
 
 const AllAnimals = ({allAnimals}) => (
   <ul className="allAnimals" >
     <h1>ALL ANIMALS</h1>
     <div className="row">
       {allAnimals.map((animal) => (
-          <Card key={animal.id} animal={animal} />
+          <Link key={animal.id} to={`/All Adoptions/${animal.id}`}><Card  animal={animal} /></Link>
       ))}
     </div>
   </ul>
