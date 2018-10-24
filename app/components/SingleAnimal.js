@@ -2,6 +2,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchSingleAnimalThunk } from "../store";
+import {Link} from 'react-router-dom'
 
 class SingleAnimal extends Component {
   componentDidMount() {
@@ -31,6 +32,14 @@ class SingleAnimal extends Component {
           </ul>
         </div>
         <div className="col-8" />
+          <h2>{currAnimal.name}</h2>
+          <ul>
+              <li><p>ID# {currAnimal.id}</p></li>
+              <li><p>{currAnimal.type}</p></li>
+              <li><p>{currAnimal.center.name}</p></li>
+          </ul>
+          <p className="single-animal-description">{currAnimal.description ? currAnimal.description : ''}</p>
+          <p>Head <Link to="/All Adoptions">back to search</Link> more Boroughbreds just like Karachi. All animals are microchipped, vaccinated, and spayed or neutered before adoption. </p>
       </section>
     ) : null;
   }
