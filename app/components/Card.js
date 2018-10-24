@@ -8,7 +8,7 @@ const Card = ({center, selection, animal}) => {
     <li className='card-body columns'>
         <div>
             <span>
-                <img src={data.imageUrl} style={{ width: "100%", height: "345px"}} />
+                <img src={data.imageUrl} style={{ width: "100%", height: "258.75px"}} />
             </span>
         </div>
         <div>
