@@ -2,8 +2,8 @@
 import React, { Component } from "react";
 
 export default class Carousel extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       imgIdx: 0,
       imgUrls: [
