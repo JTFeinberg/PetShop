@@ -16,3 +16,4 @@ export default createStore(
 
 export * from './reducers/centers.js'
 export * from './reducers/animals.js'
+export * from './reducers/singleAnimal.js'
