@@ -7,7 +7,7 @@ import { fetchSingleAnimalThunk } from "../store";
 
 const AllAnimals = ({ allAnimals, loadSingleAnimal, location }) => {
   //location.search = ?center_id=${id#}&animal_type=${type}&animal_id=${id#}
-  let filterCriteria = location.search
+  let filterCriteria = location.search.length ? location.search
     .slice(1)
     .split("&")
     .map(serachString => serachString.split("="))
@@ -16,13 +16,21 @@ const AllAnimals = ({ allAnimals, loadSingleAnimal, location }) => {
         filterObj[serachArr[0]] = serachArr[1];
       }
       return filterObj;
-    }, {});
-    
+    }, {}) : {};
+  let filteredAnimals = allAnimals.filter(animal => {
+    for (let filter in filterCriteria) {
+      if (animal[filter] === undefined || animal[filter] != filterCriteria[filter]) {
+        return false;
+      }
+    }
+    return true;
+  });
+
   return (
     <ul className="allAnimals">
       <h1>ALL ANIMALS</h1>
       <div className="row">
-        {allAnimals.map(animal => (
+        {filteredAnimals.map(animal => (
           <Link
             onClick={() => loadSingleAnimal(animal)}
             key={animal.id}
