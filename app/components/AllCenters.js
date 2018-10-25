@@ -10,7 +10,7 @@ const AllCenters = ({allCenters}) => (
     <h1>ALL LOCATIONS</h1>
     <div className="row">
       {allCenters.map((center) => (
-          <Link key={center.id} to={`/All Adoptions?center_id=${center.id}`}><Card key={center.id} center={center} /></Link>
+          <Link key={center.id} to={`/All Adoptions?centerId=${center.id}&type=&id=`}><Card key={center.id} center={center} /></Link>
       ))}
     </div>
   </ul>

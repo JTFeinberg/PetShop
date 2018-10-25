@@ -17,9 +17,11 @@ const Card = ({center, selection, animal}) => {
             </span>
         </div>
         <div>
+        {center || animal ?
             <span>
-                <h6>{data.location}</h6>
+                <h6>{data.location || data.center.name}</h6>
             </span>
+        : null}
         </div>
     </li>
   );
