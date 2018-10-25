@@ -5,7 +5,9 @@ import {Card} from './'
 import {Link} from 'react-router-dom'
 import { fetchSingleAnimalThunk } from "../store";
 
-const AllAnimals = ({allAnimals, loadSingleAnimal}) => (
+const AllAnimals = ({allAnimals, loadSingleAnimal, match, location}) => {
+console.log(location)
+return (
   <ul className="allAnimals" >
     <h1>ALL ANIMALS</h1>
     <div className="row">
@@ -14,7 +16,7 @@ const AllAnimals = ({allAnimals, loadSingleAnimal}) => (
       ))}
     </div>
   </ul>
-)
+)}
 
 /**
  * CONTAINER
