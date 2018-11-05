@@ -80,6 +80,7 @@ class AllAnimals extends Component {
           <option key={center.id} value={center.id}>{center.name}</option>
           ))}
         </select>
+        <input type="submit" value="Search" />
         </form>
         <div className="row">
           {filteredAnimals.map(animal => (
