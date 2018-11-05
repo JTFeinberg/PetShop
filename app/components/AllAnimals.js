@@ -10,7 +10,8 @@ class AllAnimals extends Component {
     super(props);
     this.state = {
       animalId: '',
-      centerId: ''
+      centerId: '',
+      animalType: 'All Adoptions'
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -23,7 +24,7 @@ class AllAnimals extends Component {
 
   render() {
     let { allAnimals, loadSingleAnimal, location, centers } = this.props;
-    let { animalId, centerId } = this.state;
+    let { animalId, centerId, animalType } = this.state;
     /*
     location.search = ?centerId=${id#}&type=${type}&id=${id#}
     type refers to the type of animal (Dog,Cat, Rabbit)
@@ -51,6 +52,12 @@ class AllAnimals extends Component {
       }
       return true;
     });
+    const animalTypes = [
+      {id: 1, name: 'All Adoptions'},
+      {id: 2, name: 'Dog'},
+      {id: 3, name: 'Cat'},
+      {id: 4, name: 'Rabbit'}
+    ];
   
     return (
       <ul className="allAnimals">
@@ -62,8 +69,13 @@ class AllAnimals extends Component {
             maxLength="6"
             placeholder="Animal ID"
           />
-        <select name="action" value={centerId} label="Action" onChange={this.handleChange}>
-          <option value={centerId}>Locations</option>
+        <select name="animalType" value={animalType} onChange={this.handleChange}>
+          {animalTypes.map(type => (
+          <option key={type.id} value={type.name}>{type.name}</option>
+          ))}
+        </select>
+        <select name="centerId" value={centerId} onChange={this.handleChange}>
+          <option value="" >Locations</option>
           {centers.map(center => (
           <option key={center.id} value={center.id}>{center.name}</option>
           ))}
