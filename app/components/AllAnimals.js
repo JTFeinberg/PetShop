@@ -11,7 +11,15 @@ class AllAnimals extends Component {
     this.state = {
       animalId: ''
     };
+
+    this.handleChange = this.handleChange.bind(this);
   }
+
+  handleChange({ target }) {
+    let { name, value } = target;
+    this.setState({[name]: value});
+  }
+
   render() {
     let { allAnimals, loadSingleAnimal, location } = this.props;
     let { animalId } = this.state;
@@ -48,7 +56,7 @@ class AllAnimals extends Component {
         <form>
         <input
             name="animalId"
-            // value={animalId}
+            value={animalId}
             maxLength="6"
             placeholder="Animal ID"
           />
