@@ -9,7 +9,8 @@ class AllAnimals extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      animalId: ''
+      animalId: '',
+
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -21,7 +22,7 @@ class AllAnimals extends Component {
   }
 
   render() {
-    let { allAnimals, loadSingleAnimal, location } = this.props;
+    let { allAnimals, loadSingleAnimal, location, centers } = this.props;
     let { animalId } = this.state;
     /*
     location.search = ?centerId=${id#}&type=${type}&id=${id#}
@@ -57,9 +58,15 @@ class AllAnimals extends Component {
         <input
             name="animalId"
             value={animalId}
+            onChange={this.handleChange}
             maxLength="6"
             placeholder="Animal ID"
           />
+        <select name="action" label="Action" onChange={this.handleChange}>
+          {centers.map(center => (
+          <option key={center.id} value={center.id}>{center.name}</option>
+          ))}
+        </select>
         </form>
         <div className="row">
           {filteredAnimals.map(animal => (
@@ -82,7 +89,8 @@ class AllAnimals extends Component {
  */
 const mapStateToProps = state => {
   return {
-    allAnimals: state.animals
+    allAnimals: state.animals,
+    centers: state.centers
   };
 };
 
