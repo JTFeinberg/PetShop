@@ -6,9 +6,15 @@ import { Link } from "react-router-dom";
 import { fetchSingleAnimalThunk } from "../store";
 
 class AllAnimals extends Component {
-  
+  constructor(props) {
+    super(props);
+    this.state = {
+      animalId: ''
+    };
+  }
   render() {
     let { allAnimals, loadSingleAnimal, location } = this.props;
+    let { animalId } = this.state;
     /*
     location.search = ?centerId=${id#}&type=${type}&id=${id#}
     type refers to the type of animal (Dog,Cat, Rabbit)
@@ -39,7 +45,14 @@ class AllAnimals extends Component {
   
     return (
       <ul className="allAnimals">
-        <h1>ALL ANIMALS</h1>
+        <form>
+        <input
+            name="animalId"
+            // value={animalId}
+            maxLength="6"
+            placeholder="Animal ID"
+          />
+        </form>
         <div className="row">
           {filteredAnimals.map(animal => (
             <Link
