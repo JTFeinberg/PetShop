@@ -8,9 +8,9 @@ const LandingPage = () => {
   const selections = [
     {id: 1, name: 'Locations', imageUrl: 'https://www.nycacc.org/sites/default/files/2017-11/ACC-Hero-Locations.jpg'},
     {id: 2, name: 'All Adoptions', imageUrl: 'https://www.nycacc.org/sites/default/files/2017-11/leadership.jpg'},
-    {id: 3, name: 'Dogs', imageUrl: 'https://www.nycacc.org/sites/default/files/styles/max_325x325/public/2018-02/dogs%20updated.jpg?itok=9QOleHxG'},
-    {id: 4, name: 'Cats', imageUrl: 'https://www.nycacc.org/sites/default/files/styles/max_325x325/public/2018-02/cats%20updated.jpg?itok=W7YhjeCa'},
-    {id: 5, name: 'Bunnies', imageUrl: 'https://www.nycacc.org/sites/default/files/styles/max_325x325/public/2018-02/Bunny%20Updated.jpg?itok=4SVJHnkv'}
+    {id: 3, name: 'Dog', imageUrl: 'https://www.nycacc.org/sites/default/files/styles/max_325x325/public/2018-02/dogs%20updated.jpg?itok=9QOleHxG'},
+    {id: 4, name: 'Cat', imageUrl: 'https://www.nycacc.org/sites/default/files/styles/max_325x325/public/2018-02/cats%20updated.jpg?itok=W7YhjeCa'},
+    {id: 5, name: 'Rabbit', imageUrl: 'https://www.nycacc.org/sites/default/files/styles/max_325x325/public/2018-02/Bunny%20Updated.jpg?itok=4SVJHnkv'}
   ];
   return (
       <div className="landingPage-wrapper">
@@ -28,7 +28,7 @@ const LandingPage = () => {
         <ul>
           <div className="row">
                   {selections.map((selection) => (
-                    <Link to={`${selection.name}`} key={selection.id}>
+                    <Link to={selection.id <= 2 ? `/${selection.name}` : `/All Adoptions?centerId=&type=${selection.name}&id=`} key={selection.id}>
                       <Card  selection={selection} />
                     </Link>
                     ))}
