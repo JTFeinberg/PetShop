@@ -159,15 +159,20 @@ input, select {
   width: 200px;
   border: 1px solid #212121;
 }
+#animal-type-select, #center-select {
+  /* -webkit-appearance: none; */
+  -webkit-border-radius: 0px;
+  border-radius: 0;
+}
 .filter-submit {
   background-color: #61aab8;
   color: white;
   border: none;
   border-radius: 0 5px 5px 0;
 }
-/* .form-border {
+.form-border {
   border-radius:5px 0 0 5px;
-} */
+}
 
 /***************
 ALL ANIMALS
