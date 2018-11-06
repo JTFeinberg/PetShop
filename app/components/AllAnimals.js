@@ -69,7 +69,7 @@ class AllAnimals extends Component {
 
     return (
       <ul className="allAnimals">
-        <form>
+        <form className="filter-form">
         <input
             name="id"
             value={id}

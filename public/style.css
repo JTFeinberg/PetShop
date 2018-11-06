@@ -144,6 +144,23 @@ ALL CENTERS
   margin: 5%;
   padding-top: 80px;
 }
+/***************
+Filter Form
+****************/
+form {
+  display: flex;
+  justify-content: center;
+}
+
+input, select {
+  height: 69px;
+  line-height: 50px;
+  font-size: 17.71px;
+  width: 200px;
+  border: 1px solid #212121;
+  /* border-right: 1px solid #212121; */
+}
+
 
 /***************
 ALL ANIMALS
