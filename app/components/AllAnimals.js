@@ -9,9 +9,9 @@ class AllAnimals extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      animalId: '',
+      id: '',
       centerId: '',
-      animalType: 'All Adoptions'
+      type: ''
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -24,7 +24,7 @@ class AllAnimals extends Component {
 
   render() {
     let { allAnimals, loadSingleAnimal, location, centers } = this.props;
-    let { animalId, centerId, animalType } = this.state;
+    let { id, centerId, type } = this.state;
     /*
     location.search = ?centerId=${id#}&type=${type}&id=${id#}
     type refers to the type of animal (Dog,Cat, Rabbit)
@@ -58,20 +58,20 @@ class AllAnimals extends Component {
       {id: 3, name: 'Cat'},
       {id: 4, name: 'Rabbit'}
     ];
-  
+
     return (
       <ul className="allAnimals">
         <form>
         <input
-            name="animalId"
-            value={animalId}
+            name="id"
+            value={id}
             onChange={this.handleChange}
             maxLength="6"
             placeholder="Animal ID"
           />
-        <select name="animalType" value={animalType} onChange={this.handleChange}>
-          {animalTypes.map(type => (
-          <option key={type.id} value={type.name}>{type.name}</option>
+        <select name="type" value={type} onChange={this.handleChange}>
+          {animalTypes.map(animalType => (
+          <option key={animalType.id} value={animalType.name === 'All Adoptions' ? '' : animalType.name}>{animalType.name}</option>
           ))}
         </select>
         <select name="centerId" value={centerId} onChange={this.handleChange}>
