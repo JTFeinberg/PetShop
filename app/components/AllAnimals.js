@@ -76,6 +76,7 @@ class AllAnimals extends Component {
             onChange={this.handleChange}
             maxLength="6"
             placeholder="Animal ID"
+            className="form-border"
           />
         <select name="type" value={type} onChange={this.handleChange}>
           {animalTypes.map(animalType => (
@@ -88,7 +89,7 @@ class AllAnimals extends Component {
           <option key={center.id} value={center.id}>{center.name}</option>
           ))}
         </select>
-        <input className="filter-submit" type="submit" value="Search" />
+        <input className="filter-submit form-border" type="submit" value="Search" />
         </form>
         <div className="row">
           {filteredAnimals.map(animal => (

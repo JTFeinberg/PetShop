@@ -161,7 +161,9 @@ input, select {
   border-radius: 5px;
 }
 .filter-submit {
-
+  background-color: #61aab8;
+  color: white;
+  border: none;
 }
 
 
