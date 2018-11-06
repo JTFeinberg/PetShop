@@ -158,14 +158,16 @@ input, select {
   font-size: 17.71px;
   width: 200px;
   border: 1px solid #212121;
-  border-radius: 5px;
 }
 .filter-submit {
   background-color: #61aab8;
   color: white;
   border: none;
+  border-radius: 0 5px 5px 0;
 }
-
+/* .form-border {
+  border-radius:5px 0 0 5px;
+} */
 
 /***************
 ALL ANIMALS
