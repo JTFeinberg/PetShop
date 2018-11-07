@@ -69,26 +69,27 @@ class AllAnimals extends Component {
 
     return (
       <ul className="allAnimals">
-        <form>
+        <form className="filter-form">
         <input
             name="id"
             value={id}
             onChange={this.handleChange}
             maxLength="6"
             placeholder="Animal ID"
+            className="form-border"
           />
-        <select name="type" value={type} onChange={this.handleChange}>
+        <select id="animal-type-select" name="type" value={type} onChange={this.handleChange}>
           {animalTypes.map(animalType => (
           <option key={animalType.id} value={animalType.name === 'All Adoptions' ? '' : animalType.name}>{animalType.name}</option>
           ))}
         </select>
-        <select name="centerId" value={centerId} onChange={this.handleChange}>
+        <select id="center-select" name="centerId" value={centerId} onChange={this.handleChange}>
           <option value="" >Locations</option>
           {centers.map(center => (
           <option key={center.id} value={center.id}>{center.name}</option>
           ))}
         </select>
-        <input type="submit" value="Search" />
+        <input className="filter-submit" type="submit" value="Search" />
         </form>
         <div className="row">
           {filteredAnimals.map(animal => (

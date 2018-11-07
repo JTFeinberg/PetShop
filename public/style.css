@@ -144,6 +144,35 @@ ALL CENTERS
   margin: 5%;
   padding-top: 80px;
 }
+/***************
+Filter Form
+****************/
+form {
+  display: flex;
+  justify-content: center;
+}
+
+input, select {
+  height: 69px;
+  line-height: 50px;
+  font-size: 17.71px;
+  width: 200px;
+  border: 1px solid #212121;
+}
+#animal-type-select, #center-select {
+  /* -webkit-appearance: none; */
+  -webkit-border-radius: 0px;
+  border-radius: 0;
+}
+.filter-submit {
+  background-color: #61aab8;
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+}
+.form-border {
+  border-radius:5px 0 0 5px;
+}
 
 /***************
 ALL ANIMALS
